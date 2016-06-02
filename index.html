@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PayPal - Básico</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+
+          <h1>PayPal - Básico</h1>
+
+
+          <!-- DIRECCION A ENVIAR: https://www.sandbox.paypal.com/cgi-bin/webscr -->
+          <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Curso de PHP</h3>
+              </div>
+              <div class="panel-body">
+                <input type="hidden" name="cmd" value="_xclick">
+                <!-- Cuenta de Paypal -->
+                <input type="hidden" name="business" value="reynaldoegesparza-facilitator@gmail.com">
+                <!-- Nombre del artículo -->
+                <input type="hidden" name="item_name" value="Articulo de Prueba">
+                <!-- Moneda -->
+                <input type="hidden" name="currency_code" value="MXN">
+                <!-- Cantidad -->
+                <input type="hidden" name="amount" value="20.00">
+                <img src="php-elephant.png">
+                <div class="form-group amount">
+                  <label class="sr-only" for="Amount">Precio</label>
+                  <div class="input-group">
+                    <div class="input-group-addon">$</div>
+                    <input type="text" class="form-control" id="Amount" placeholder="Amount" value="20.00" disabled="disabled" width="20">
+                    <div class="input-group-addon">.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <!-- Boton de pago -->
+                <input type="image" src="https://www.paypalobjects.com/es_ES/i/btn/x-click-but6.gif"
+                       name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+
+              </div>
+            </div>
+          </form>
+
+
+
+
+        </div><!-- //col-md -->
+
+      </div><!-- //row -->
+
+    </div><!-- //container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>
