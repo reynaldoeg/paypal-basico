@@ -45,6 +45,12 @@
                 <input type="hidden" name="currency_code" value="MXN">
                 <!-- Cantidad -->
                 <input type="hidden" name="amount" value="20.00">
+                <!--Evitar que paypal pregunte por una dirección -->
+                <input type="hidden" name="no_shipping" value="1">
+                <!-- Indicar sitio de retorno o de cancelación -->
+                <input type="hidden" name="return" value="http://localhost:8888/paypal-basico/pagado.php">
+                <input type="hidden" name="cancel_return" value="http://localhost:8888/paypal-basico/cancelado.php">
+
                 <img src="php-elephant.png">
                 <div class="form-group amount">
                   <label class="sr-only" for="Amount">Precio</label>
